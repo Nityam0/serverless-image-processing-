@@ -1,10 +1,6 @@
 version: 0.2
 
 phases:
-  install:
-    runtime-versions:
-      python: 3.9
-
   build:
     commands:
       - echo "Packaging Lambda function"
@@ -13,6 +9,4 @@ phases:
   post_build:
     commands:
       - echo "Deploying Lambda"
-      - aws lambda update-function-code \
-        --function-name image-resizer \
-        --zip-file fileb://lambda_function.zip
+      - aws lambda update-function-code --function-name image-resizer --zip-file fileb://lambda_function.zip
