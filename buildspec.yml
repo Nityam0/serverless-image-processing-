@@ -9,4 +9,4 @@ phases:
   post_build:
     commands:
       - echo "Deploying Lambda"
-      - aws lambda update-function-code --function-name image-resizer --zip-file fileb://lambda_function.zip
+      - aws lambda update-function-code --function-name get-processed-image --zip-file fileb://lambda_function.zip
